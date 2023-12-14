@@ -32,10 +32,10 @@ post{
             mail to: "ramdee70640@gmail.com",
             subject: 'Build successful',
             body: 'The Build is successful',
-        }
+              }   
+}
 }
 
-}
 
              
               
