@@ -23,20 +23,23 @@ pipeline {
     }
     
   }
-  post{
+
+post{
       always{
             sh 'docker rm -f mypycont'
             sh 'docker run --name mypycont -d -p 3000:5000 my-flask'
-            mail to: "ramdee70640@gmail.com",
-            subject: "Build successful",
-            body: "The Build is successful"
+            catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+            mail  to: "jeelani.yasmin@gmail.com",
+                  subject: "Notification mail from Jenkins",
+                  body: "CI/CD pipeline completed successfully.\n\nCheck the application"
+                
+                
         }
 }
+
+}
 }
 
-
-
-           
              
               
   
@@ -48,3 +51,16 @@ pipeline {
 
   
 
+
+
+
+             
+              
+  
+
+                 
+    
+  
+    
+
+  
