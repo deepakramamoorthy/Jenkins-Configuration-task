@@ -32,12 +32,9 @@ post{
             mail  to: "deepak.ramamoorthy97@gmail.com",
                   subject: "Notification mail from Jenkins",
                   body: "CI/CD pipeline completed successfully",
-                
-                
+            }
         }
-}
-
-}
+  }
 }
 
              
