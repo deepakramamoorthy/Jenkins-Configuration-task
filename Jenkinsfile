@@ -35,7 +35,7 @@ pipeline {
             mail to: "deepak.ramamoorthy97@gmail.com",
                  subject: "Jenkins Build Successful",
                  body:" Sucessfully done",
-              }          
+        }          
    }
 }
   
